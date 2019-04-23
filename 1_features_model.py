@@ -246,7 +246,7 @@ for i in range(0, len(cuisine_strength)):
 header.append('no_ingr')
     
 
-with open('/Users/minnie/Desktop/Kaggle/Cooking/Coding/LogisticRegression/train_scoring_ub20.csv', 'w',newline='') as csvfile:
+with open('/Users/saurabh/Desktop/Kaggle/Cooking/Coding/LogisticRegression/train_scoring_ub20.csv', 'w',newline='') as csvfile:
     writer = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
     writer.writerow(header)
     writer.writerows(matrix)
@@ -255,7 +255,7 @@ print('Time Taken in model formation' , (time.clock() - start)/60, 'mins')
 
 
 #Scoring
-with open("/Users/minnie/Desktop/Kaggle/Cooking/Data/all/test.json","r", encoding="utf-8") as f:
+with open("/Users/saurabh/Desktop/Kaggle/Cooking/Data/all/test.json","r", encoding="utf-8") as f:
     json_dict = json.load(f)
     
 
@@ -313,18 +313,18 @@ for i in range(0, len(test_vector)):
     
 print('Scoring done')
 
-with open('/Users/minnie/Desktop/Kaggle/Cooking/Coding/LogisticRegression/LR_test_20_1.csv', 'w',newline='') as csvfile:
+with open('/Users/saurabh/Desktop/Kaggle/Cooking/Coding/LogisticRegression/LR_test_20_1.csv', 'w',newline='') as csvfile:
     writer = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
     writer.writerow(['id', 'cuisine'])
     writer.writerows(testcuisine)
     
-with open('/Users/minnie/Desktop/Kaggle/Cooking/Coding/LogisticRegression/LR_test_20_1.csv', 'r') as f:
+with open('/Users/saurabh/Desktop/Kaggle/Cooking/Coding/LogisticRegression/LR_test_20_1.csv', 'r') as f:
     reader = csv.reader(f)
     your_list = list(reader)
 
 print('csv done')
 
-with open('/Users/minnie/Desktop/Kaggle/Cooking/Data/all2/kaggle_submission.csv', 'r') as f:
+with open('/Users/saurabh/Desktop/Kaggle/Cooking/Data/all2/kaggle_submission.csv', 'r') as f:
     reader = csv.reader(f)
     list_kaggle = list(reader)
     
@@ -335,7 +335,7 @@ for i in range(0,len(list_kaggle)):
             break
 
 
-with open('/Users/minnie/Desktop/Kaggle/Cooking/Coding/LogisticRegression/LR_test_20_1.csv', 'w',newline='') as csvfile:
+with open('/Users/saurabh/Desktop/Kaggle/Cooking/Coding/LogisticRegression/LR_test_20_1.csv', 'w',newline='') as csvfile:
     writer = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
     writer.writerows(list_kaggle)
 
